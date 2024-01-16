@@ -5,13 +5,13 @@
 <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('static/assets/img/background-bg.jpg');">
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('{% static 'assets/img/background-bg.jpg' %}');">
       <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-        <h2>{{service_details}}</h2>
+        <h2>{{article_text}}</h2>
         <ol>
           <li><a href="{% url 'home' %}">{{home}}</a></li>
-          <li>{{service_details}}</li>
+          <li>{{article_text}}</li>
         </ol>
 
       </div>

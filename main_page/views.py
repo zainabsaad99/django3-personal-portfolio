@@ -32,10 +32,7 @@ def read_services(dir):
             intro_img = str(os.path.join(dir, d, f))
             # Modify the image path by replacing 'static/' and backslashes with forward slashes
             dir_detail_of_services["intro_img"] = intro_img.replace('static/', '').replace('\\', '/')  
-         elif f.endswith(".mp4"):
-            intro_img = str(os.path.join(dir, d, f))
-            # Modify the image path by replacing 'static/' and backslashes with forward slashes
-            dir_detail_of_services["intro_video"] = intro_img.replace('static/', '').replace('\\', '/')     
+        
 
 
           
@@ -58,8 +55,6 @@ def home(request):
    context["articles"] = articles 
    achievements = read_services('static/media/achievement')
    context["achievement"] = achievements 
-   vid = read_services('static/media/videos')
-   context["video"] = vid
  
    return render(request,'main_page/index.html',context)
 
